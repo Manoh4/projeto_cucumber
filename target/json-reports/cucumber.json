@@ -12,7 +12,7 @@
         "before": [
           {
             "result": {
-              "duration": 37561913937,
+              "duration": 28074555460,
               "status": "passed"
             },
             "match": {
@@ -27,7 +27,7 @@
         "after": [
           {
             "result": {
-              "duration": 337347478,
+              "duration": 821276991,
               "status": "passed"
             },
             "match": {
@@ -40,7 +40,7 @@
         "steps": [
           {
             "result": {
-              "duration": 10862904741,
+              "duration": 5605677429,
               "status": "passed"
             },
             "line": 9,
@@ -52,7 +52,7 @@
           },
           {
             "result": {
-              "duration": 2095862884,
+              "duration": 2401757501,
               "status": "passed"
             },
             "line": 10,
@@ -70,7 +70,7 @@
           },
           {
             "result": {
-              "duration": 351171333,
+              "duration": 504991055,
               "status": "passed"
             },
             "line": 11,
@@ -88,7 +88,7 @@
           },
           {
             "result": {
-              "duration": 1169377694,
+              "duration": 1892566365,
               "status": "passed"
             },
             "line": 12,
@@ -100,7 +100,7 @@
           },
           {
             "result": {
-              "duration": 182225160,
+              "duration": 203427270,
               "status": "passed"
             },
             "line": 13,
@@ -112,7 +112,7 @@
           },
           {
             "result": {
-              "duration": 172503212,
+              "duration": 137714204,
               "status": "passed"
             },
             "line": 14,
@@ -124,7 +124,7 @@
           },
           {
             "result": {
-              "duration": 1769290944,
+              "duration": 1610724487,
               "status": "passed"
             },
             "line": 15,
@@ -136,7 +136,7 @@
           },
           {
             "result": {
-              "duration": 243452545,
+              "duration": 297026787,
               "status": "passed"
             },
             "line": 16,
@@ -154,7 +154,7 @@
           },
           {
             "result": {
-              "duration": 478613813,
+              "duration": 1666367086,
               "status": "passed"
             },
             "line": 17,
@@ -166,9 +166,8 @@
           },
           {
             "result": {
-              "duration": 15613351993,
-              "error_message": "java.lang.AssertionError: A mensagem \u0027Conta adicionada com sucesso não foi exibida\u0027!\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat br.com.cucumber.steps.InserirContaSteps.a_conta_é_inserida_com_sucesso(InserirContaSteps.java:85)\r\n\tat ✽.Então a conta é inserida com sucesso(src/test/resources/features/CadastrarConta.feature:18)\r\n",
-              "status": "failed"
+              "duration": 83068969,
+              "status": "passed"
             },
             "line": 18,
             "name": "a conta é inserida com sucesso",

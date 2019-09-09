@@ -8,18 +8,16 @@ pipeline{
 			
 			steps{
 				
-				withMaven(maven: 'Maven_3.5.0'){
+				withMaven(maven: 'maven_3_6_2') {
 					sh 'mvn clean install'
-					
 				}			
 			}
 		}
-		
 		stage('Test Stage'){
 			
 			steps{
 				
-				withMaven(maven: 'maven_3_5_0'){
+				withMaven(maven: 'maven_3_6_2'){
 					sh 'mvn test'
 					
 				}			
@@ -31,9 +29,8 @@ pipeline{
 			steps{
 				cucumber buildStatus: "UNSTABLE",
 					fileIncludePattern: "**/cucumber.json",
-					jsonReportDirectory: 'target'
+					jsonReportDirectory: 'target/json-reports'
 			}
 		}
 	}
-
 }
