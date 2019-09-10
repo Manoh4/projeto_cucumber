@@ -18,6 +18,7 @@ public class TelaMenuInicial extends AcoesGenericas{
 	public static final String SAIR = "//a[contains(text(),'Sair')]";
 	public static final String MSG_BEM_VINDO = "//div[@class='alert alert-success'][contains(.,'Bem vindo, Emanuel Preto Cardoso!')]";
 	public static final String MSG_CONTA_ADICIONADA = "//div[@class='alert alert-success'][contains(.,'Conta adicionada com sucesso!')]";
+	public static final String HIDDEN_LINK_RESET = "//a[contains(text(),'reset')]";
 	
 	public TelaMenuInicial(WebDriver driver, WebDriverWait wait) {
 		super(driver, wait);
@@ -47,5 +48,9 @@ public class TelaMenuInicial extends AcoesGenericas{
 	
 	public boolean verificaMensagemContaAdicionadaComSucesso() {
 		return verificaExistenciaDoElemento(MSG_CONTA_ADICIONADA);
+	}
+
+	public void clicarNoBotaoResetData() {
+		clicarNoElemento(HIDDEN_LINK_RESET);
 	}
 }

@@ -41,13 +41,13 @@ public class InserirContaSteps {
 	}
 
 	@Quando("^informo o usuário \"([^\"]*)\"$")
-	public void informo_o_usuário(String arg1) throws Throwable {
-		telaLogin.preencherUsuario("emanuel.estevao2.479@gmail.com");
+	public void informo_o_usuário(String usuario) throws Throwable {
+		telaLogin.preencherUsuario(usuario);
 	}
 
 	@Quando("^a senha \"([^\"]*)\"$")
-	public void a_senha(String arg1) throws Throwable {
-		telaLogin.preencherSenha("Sorria123");
+	public void a_senha(String senha) throws Throwable {
+		telaLogin.preencherSenha(senha);
 	}
 
 	@Quando("^seleciono entrar$")
@@ -83,5 +83,15 @@ public class InserirContaSteps {
 	@Então("^a conta é inserida com sucesso$")
 	public void a_conta_é_inserida_com_sucesso() throws Throwable {
 		Assert.assertTrue("A mensagem 'Conta adicionada com sucesso não foi exibida'!",telaMenuInicial.verificaMensagemContaAdicionadaComSucesso());
+	}
+	
+	@Então("^sou notificado que o nome da conta é obrigatório$")
+	public void sou_notificado_que_o_nome_da_conta_é_obrigatório() throws Throwable {
+		Assert.assertTrue("A mensagem 'Informe o nome da conta' não foi exibida!'", telaAdicionarConta.verificarExistenciaDaMsgInformeONomeDaConta());
+	}
+	
+	@Então("^sou notificado que já existe uma conta com esse nome$")
+	public void sou_notificado_que_já_existe_uma_conta_com_esse_nome() throws Throwable {
+		Assert.assertTrue("A mensagem 'Conta já cadastrada' não foi exibIda!'", telaAdicionarConta.verificarExistenciaDaMsgContaJaCadastrada());
 	}
 }
